@@ -3,7 +3,7 @@ name = "jupyter-shared-deps"
 version = "0.1.0"
 description = "Shared Jupyter dependencies for SAP projects"
 authors = [
-    {name = "Anton Golubev", email = "anton.golubev@sap.com"},
+    {name = "Anton Golubev", email = "anton.golubev@gmail.com"},
 ]
 requires-python = "<4.0,>=3.12"
 dependencies = [
