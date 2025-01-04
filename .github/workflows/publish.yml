@@ -18,10 +18,10 @@ jobs:
       - uses: astral-sh/setup-uv@v1
         
       - name: Build package
-        run: uv pip build
+        run: uv build
         
       - name: Publish to GitHub Packages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          uv pip publish --repository-url https://maven.pkg.github.com/anton-live/jupyter-shared-deps dist/*
+          uv publish --repository-url https://maven.pkg.github.com/anton-live/jupyter-shared-deps dist/*
