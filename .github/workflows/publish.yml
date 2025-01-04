@@ -1,0 +1,27 @@
+name: Build and Publish Package
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: astral-sh/setup-uv@v1
+        
+      - name: Build package
+        run: uv pip build
+        
+      - name: Publish to GitHub Packages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          uv pip publish --repository-url https://maven.pkg.github.com/anton-live/jupyter-shared-deps dist/*

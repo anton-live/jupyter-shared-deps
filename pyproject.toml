@@ -1,0 +1,23 @@
+[project]
+name = "jupyter-shared-deps"
+version = "0.1.0"
+description = "Shared Jupyter dependencies for SAP projects"
+authors = [
+    {name = "Anton Golubev", email = "anton.golubev@sap.com"},
+]
+requires-python = "<4.0,>=3.12"
+dependencies = [
+    "jupyter<2.0.0,>=1.0.0",
+    "pandas<3.0.0,>=2.2.0",
+    "plotly<6.0.0,>=5.18.0",
+    "google-cloud-bigquery<4.0.0,>=3.25.0",
+    "google-cloud-storage<3.0.0,>=2.14.0",
+    "gcsfs<2024.0.0.0,>=2023.12.2",
+    "openpyxl<4.0.0,>=3.1.2",
+    "fsspec<2024.0.0,>=2023.12.2"
+]
+readme = "README.md"
+
+[build-system]
+requires = ["uv"]
+build-backend = "uv.build"
