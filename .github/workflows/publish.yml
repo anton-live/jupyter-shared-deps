@@ -21,7 +21,3 @@ jobs:
         
       - name: Build package
         run: uv build --no-sources
-        
-      - name: Publish to GitHub Packages
-        run: |
-          uv publish --index github

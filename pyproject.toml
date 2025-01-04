@@ -18,11 +18,3 @@ dependencies = [
 ]
 readme = "README.md"
 
-#[build-system]
-#requires = ["uv"]
-#build-backend = "uv.build"
-
-[[tool.uv.index]]
-name = "github"
-url = "https://maven.pkg.github.com/anton-live/jupyter-shared-deps/simple/"
-publish-url = "https://maven.pkg.github.com/anton-live/jupyter-shared-deps/"
