@@ -1,6 +1,6 @@
 [project]
 name = "jupyter-shared-deps"
-version = "2.0.0"
+version = "2.1.0"
 description = "Shared Jupyter dependencies for notebook execution"
 authors = [
     {name = "Anton Golubev", email = "anton.golubev@gmail.com"},
@@ -19,10 +19,10 @@ dependencies = [
 
     # Google Cloud integration
     "google-cloud-bigquery<4.0.0,>=3.25.0",
-    "google-cloud-storage<3.0.0,>=2.14.0",
+    "google-cloud-storage<4.0.0,>=3.0.0",
     "pandas-gbq>=0.26.0",
-    "gcsfs<2025.0.0,>=2023.12.2",
-    "fsspec<2025.0.0,>=2023.12.2",
+    "gcsfs>=2025.7.0",
+    "fsspec>=2025.7.0",
 
     # File formats
     "openpyxl<4.0.0,>=3.1.2",
@@ -30,6 +30,7 @@ dependencies = [
 
     # Utilities
     "tqdm>=4.67.0",
+    "pytz>=2024.1",  # pandas 3 no longer pulls it in; notebooks use it for time zones
     "jupytext>=1.16.0",
 ]
 readme = "README.md"
