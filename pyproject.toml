@@ -1,6 +1,6 @@
 [project]
 name = "jupyter-shared-deps"
-version = "1.0.0"
+version = "2.0.0"
 description = "Shared Jupyter dependencies for notebook execution"
 authors = [
     {name = "Anton Golubev", email = "anton.golubev@gmail.com"},
@@ -11,8 +11,8 @@ dependencies = [
     "jupyter<2.0.0,>=1.0.0",
 
     # Data manipulation and visualization
-    "pandas<3.0.0,>=2.2.0",
-    "numpy>=1.26.0",
+    "pandas<4.0.0,>=3.0.6",
+    "numpy>=2.5.2",
     "plotly<6.0.0,>=5.18.0",
     "matplotlib>=3.8.0",
     "seaborn>=0.13.0",
@@ -26,7 +26,7 @@ dependencies = [
 
     # File formats
     "openpyxl<4.0.0,>=3.1.2",
-    "pyarrow<16.0.0,>=15.0.0",
+    "pyarrow>=26.0.0",
 
     # Utilities
     "tqdm>=4.67.0",
